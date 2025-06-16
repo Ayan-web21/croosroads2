@@ -1,31 +1,24 @@
 body {
   margin: 0;
-  font-family: sans-serif;
-  background: #a8dadc;
-  text-align: center;
-}
-
-h1 {
-  color: #1d3557;
-  padding: 10px;
+  background: #dff9fb;
 }
 
 #game {
   position: relative;
   width: 400px;
   height: 300px;
-  margin: 0 auto;
-  background: #74c69d;
-  border: 4px solid #333;
+  margin: 50px auto;
+  background: #badc58;
   overflow: hidden;
+  border: 4px solid #333;
 }
 
 #player {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: url('https://i.imgur.com/7yUvePI.png') no-repeat center/cover;
-  top: 260px;
+  background: #f0932b;
+  bottom: 0;
   left: 190px;
 }
 
@@ -33,10 +26,6 @@ h1 {
   position: absolute;
   width: 40px;
   height: 20px;
-  background: url('https://i.imgur.com/Y6bHjjU.png') no-repeat center/cover;
+  background: #eb4d4b;
+  left: -60px;
 }
-
-/* Lanes are vertically spaced */
-.lane1 { top: 60px; }
-.lane2 { top: 120px; }
-.lane3 { top: 180px; }
