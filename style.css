@@ -36,6 +36,7 @@ h1 {
   background: url('https://i.imgur.com/Y6bHjjU.png') no-repeat center/cover;
 }
 
+/* Lanes are vertically spaced */
 .lane1 { top: 60px; }
 .lane2 { top: 120px; }
 .lane3 { top: 180px; }
