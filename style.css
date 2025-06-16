@@ -1,13 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Press Start 2P', monospace;
-  background: #95d5b2;
+  font-family: sans-serif;
+  background: #a8dadc;
   text-align: center;
 }
 
 h1 {
-  color: #2d6a4f;
-  font-size: 1.2rem;
+  color: #1d3557;
   padding: 10px;
 }
 
@@ -17,8 +16,7 @@ h1 {
   height: 300px;
   margin: 0 auto;
   background: #74c69d;
-  border: 5px solid #1b4332;
-  box-shadow: 0 0 10px #000;
+  border: 4px solid #333;
   overflow: hidden;
 }
 
