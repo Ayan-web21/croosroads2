@@ -1,4 +1,4 @@
-const player = document.getElementById("player");
+onst player = document.getElementById("player");
 const cars = document.querySelectorAll(".car");
 
 let playerX = 190;
