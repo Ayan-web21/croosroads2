@@ -1,6 +1,7 @@
-onst player = document.getElementById("player");
+const player = document.getElementById("player");
 const cars = document.querySelectorAll(".car");
 
+let gridSize = 20;
 let playerX = 190;
 let playerY = 260;
 let isGameOver = false;
@@ -8,22 +9,33 @@ let isGameOver = false;
 document.addEventListener("keydown", (e) => {
   if (isGameOver) return;
 
-  if (e.key === "ArrowUp" && playerY > 0) playerY -= 20;
-  if (e.key === "ArrowDown" && playerY < 280 - 20) playerY += 20;
-  if (e.key === "ArrowLeft" && playerX > 0) playerX -= 20;
-  if (e.key === "ArrowRight" && playerX < 400 - 20) playerX += 20;
+  switch (e.key) {
+    case "ArrowUp":
+      if (playerY > 0) playerY -= gridSize;
+      break;
+    case "ArrowDown":
+      if (playerY < 280 - gridSize) playerY += gridSize;
+      break;
+    case "ArrowLeft":
+      if (playerX > 0) playerX -= gridSize;
+      break;
+    case "ArrowRight":
+      if (playerX < 400 - gridSize) playerX += gridSize;
+      break;
+  }
 
-  player.style.left = playerX + "px";
-  player.style.top = playerY + "px";
+  player.style.left = `${playerX}px`;
+  player.style.top = `${playerY}px`;
 });
 
 function moveCars() {
   cars.forEach((car) => {
     let x = parseFloat(car.style.left) || 0;
-    x += 3 + Math.random() * 1.5;
+    x += 2.5 + Math.random(); // Speed varies a bit
     if (x > 400) x = -60;
     car.style.left = x + "px";
 
+    // Collision detection
     const carRect = car.getBoundingClientRect();
     const playerRect = player.getBoundingClientRect();
     if (
@@ -40,3 +52,4 @@ function moveCars() {
   if (!isGameOver) requestAnimationFrame(moveCars);
 }
 moveCars();
+
