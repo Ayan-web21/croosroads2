@@ -1,1 +1,32 @@
-# croosroads2
+
+body {
+  margin: 0;
+  background: #dff9fb;
+}
+
+#game {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: 50px auto;
+  background: #badc58;
+  overflow: hidden;
+  border: 4px solid #333;
+}
+
+#player {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #f0932b;
+  bottom: 0;
+  left: 190px;
+}
+
+.car {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background: #eb4d4b;
+  left: -60px;
+}
